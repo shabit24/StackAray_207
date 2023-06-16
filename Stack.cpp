@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Stack {
+class StackArray {
 private:
 	int stack_array[5];
 	int top;
@@ -32,7 +32,7 @@ public:
 			cout << "\nStack is empty. cann't pop" << endl;
 			return;
 		}
-		cout << "\nThe poped element is: " << stack_array[top] << endl;
+		cout << "\nThe popped element is: " << stack_array[top] << endl;
 		top--;
 	}
 	bool empty() {
@@ -44,8 +44,8 @@ public:
 			cout << "\nStack is empty" << endl;
 		}
 		else {
-			for (int top = top; top >= 0; top--) {
-				cout << stack_array[top] << endl;
+			for (int tmp = top; top >= 0; top--) {
+				cout << stack_array[tmp] << endl;
 			}
 		}
 	}
