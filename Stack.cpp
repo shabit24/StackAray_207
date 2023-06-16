@@ -15,17 +15,18 @@ public:
 	}
 
 
-int push(int element) {
+	void push() {
+		cout << "\nEnter element: ";
+		int element;
+		cin >> element;
 		if (top == 4) {
 			cout << "Number of data exceeds the limit "<<endl;
-			return 0;
+			return;
 		}
 		top++;
 		stack_array[top] = element;
 		cout << endl;
 		cout << element << "ditambahkan(pushed)" << endl;
-		return element;
-
 	}
 	void pop() {
 		if (empty()) {
@@ -44,7 +45,7 @@ int push(int element) {
 			cout << "\nStack is empty" << endl;
 		}
 		else {
-			for (int tmp = top; top >= 0; top--) {
+			for (int tmp = top; tmp >= 0; tmp--) {
 				cout << stack_array[tmp] << endl;
 			}
 		}
@@ -67,16 +68,14 @@ int main() {
 		cin >> ch;
 		switch (ch) {
 		case '1': {
-			cout << "\nEnter element: ";
-			int element;
-			cin >> element;
-			s.push(element);
+			s.push();
 			break;
 		}
-		case '2': if (s.empty()) {
-			cout << "\nStack array is empty" << endl;
-			break;
-		}
+		case '2':
+			if (s.empty()) {
+				cout << "\nStack array is empty" << endl;
+				break;
+			}
 				s.pop();
 				break;
 		case '3': 
