@@ -35,6 +35,20 @@ public:
 		cout << "\nThe poped element is: " << stack_array[top] << endl;
 		top--;
 	}
+	bool empty() {
+		return (top == -1);
+	}
+
+	void display() {
+		if (empty()) {
+			cout << "\nStack is empty" << endl;
+		}
+		else {
+			for (int top = top; top >= 0; top--) {
+				cout << stack_array[top] << endl;
+			}
+		}
+	}
 
 
 };
@@ -59,7 +73,21 @@ int main() {
 			s.push(element);
 			break;
 		}
-		case '2': 
+		case '2': if (s.empty()) {
+			cout << "\nStack array is empty" << endl;
+			break;
+		}
+				s.pop();
+				break;
+		case '3': 
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\nInvalid choice" << endl;
+			break;
+
 		}
 	}
 }
