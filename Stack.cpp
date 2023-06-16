@@ -29,9 +29,35 @@ public:
 	}
 	void pop() {
 		if (empty()) {
-
+			cout << "\nStack is empty. cann't pop" << endl;
+			return;
 		}
 	}
 
 
 };
+
+
+int main() {
+	StackArray s;
+	char ch;
+	while (true) {
+		cout << endl;
+		cout << "1. Push\n";
+		cout << "2. Pop\n";
+		cout << "3. Display\n";
+		cout << "4. Exit\n";
+		cout << "\nEnter your choice: ";
+		cin >> ch;
+		switch (ch) {
+		case '1': {
+			cout << "\nEnter element: ";
+			int element;
+			cin >> element;
+			s.push(element);
+			break;
+		}
+		case '2': 
+		}
+	}
+}
